@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>voter eligibility check </title>
+<style>
+body{
+font-family:arial,sans-serif;
+text-align:center;
+margin:50px;
+}
+table{
+margin:20px auto;
+border-collapse:collapse;
+width:50%;
+}
+th,td{
+border:1px solid black;
+padding:10px;
+text-align:center;
+}
+th{
+background-color:#f2f2f2;
+}
+</style>
+</head>
+<body>
+<h1>voter eligibility checker</h1>
+<script>
+let name = prompt("Enter your name:");
+let age = prompt("Enter your age:");
+age = number(age);
+let eligibility = (age>=18)?"eligible to vote": "not eligible to vote";
+if(name&&!isNaN(age)){
+document.write('
+<table>
+<tr>
+<th>name</th>
+<th>age</th>
+<th>voting eligibility</th>
+</tr>
+<tr>
+<td>${name}</td>
+<td>${age}</td>
+<td>${eligibility}</td>
+</tr>
+</table>
+');
+}else{
+document.write("<p style = 'color:red;'>invalid input.please refresh and eter valid details.</p>");
+}
+</script>
+</body>
+</html>
+
